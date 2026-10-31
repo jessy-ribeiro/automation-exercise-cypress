@@ -1,6 +1,7 @@
+
 # Automação de Testes Web — Automation Exercise
 
-Projeto de automação de testes end-to-end desenvolvido com **Cypress e JavaScript**, utilizando boas práticas de organização, modularização e reutilização de código.
+Projeto de automação de testes end-to-end desenvolvido com Cypress e JavaScript, aplicando boas práticas de organização, modularização e reutilização de código.
 
 O objetivo é validar funcionalidades essenciais da aplicação [Automation Exercise](https://automationexercise.com/), contemplando cenários de cadastro, autenticação, consulta de produtos, assinatura e realização de compras.
 
@@ -9,10 +10,10 @@ O objetivo é validar funcionalidades essenciais da aplicação [Automation Exer
 - **Cypress:** framework de automação de testes end-to-end.
 - **JavaScript:** linguagem utilizada no desenvolvimento dos testes.
 - **Node.js e npm:** ambiente de execução e gerenciamento de dependências.
-- **Page Object Model (POM):** padrão utilizado para organização e reutilização dos elementos e ações das páginas.
+- **Page Object Model (POM):** padrão para organização e reutilização de seletores e ações das páginas.
 - **Fixtures:** armazenamento de dados utilizados nos testes.
 - **Mochawesome Reporter:** geração de relatórios HTML.
-- **GitHub Actions:** automação da execução dos testes por integração contínua (CI).
+- **GitHub Actions:** integração contínua para execução automatizada dos testes.
 
 ## Cenários automatizados
 
@@ -45,8 +46,9 @@ automation-exercise-cypress/
 │   ├── fixtures/
 │   ├── pages/
 │   ├── support/
-│   ├── reports/
-│   └── videos/
+│   ├── reports/       (gerada durante a execução)
+│   ├── screenshots/   (gerada quando aplicável)
+│   └── videos/        (gerada durante a execução)
 │
 ├── .gitignore
 ├── cypress.config.js
@@ -62,10 +64,11 @@ automation-exercise-cypress/
 - **pages:** classes Page Objects, responsáveis pelos seletores e ações das páginas.
 - **support:** configurações de suporte e registro do Mochawesome.
 - **reports:** relatórios HTML gerados após a execução.
+- **screenshots:** capturas de tela geradas em situações configuradas pelo Cypress.
 - **videos:** gravações das execuções realizadas pelo Cypress.
 - **.github/workflows:** configuração do pipeline de integração contínua.
 
-> Observação: as pastas `reports` e `videos` são geradas durante as execuções e não são versionadas no repositório.
+As pastas de evidências são geradas durante as execuções e não são versionadas no repositório.
 
 ## Instalação e configuração
 
@@ -73,7 +76,7 @@ automation-exercise-cypress/
 
 - Node.js instalado.
 - npm instalado.
-- Git instalado (para clonar o repositório).
+- Git instalado.
 
 ### 1. Clonar o repositório
 
@@ -93,6 +96,12 @@ cd automation-exercise-cypress
 npm install
 ```
 
+Para reproduzir a instalação utilizando as versões registradas no arquivo de lock:
+
+```bash
+npm ci
+```
+
 ### 3. Executar os testes
 
 Para executar todos os testes no terminal:
@@ -107,11 +116,25 @@ Para abrir a interface gráfica do Cypress:
 npm run test:open
 ```
 
+**Observação para Windows PowerShell:** caso a execução de scripts esteja bloqueada, utilize `npm.cmd` no lugar de `npm`. Por exemplo:
+
+```powershell
+npm.cmd install
+npm.cmd test
+npm.cmd run test:open
+```
+
 ## Relatórios de testes
 
-O projeto utiliza o **Mochawesome Reporter** para gerar relatórios HTML com os resultados das execuções.
+O projeto utiliza o Mochawesome Reporter para gerar relatórios HTML automaticamente durante a execução dos testes.
 
-Os relatórios são configurados para serem armazenados em:
+Após executar:
+
+```bash
+npm test
+```
+
+Os relatórios são armazenados em:
 
 ```text
 cypress/reports/
@@ -127,7 +150,7 @@ O relatório permite consultar os cenários executados, resultados, duração e 
 
 ## Integração contínua — GitHub Actions
 
-O projeto possui integração com GitHub Actions por meio do arquivo:
+O projeto possui integração contínua por meio do arquivo:
 
 ```text
 .github/workflows/cypress.yml
@@ -147,23 +170,25 @@ Durante o pipeline, são realizadas as seguintes etapas:
 4. Execução dos testes automatizados.
 5. Armazenamento dos relatórios e evidências da execução.
 
-Os relatórios, vídeos e screenshots são disponibilizados como artefatos do GitHub Actions, com retenção configurada para **90 dias**.
+Os relatórios, vídeos e screenshots são disponibilizados como artefatos do GitHub Actions, com retenção configurada para 90 dias.
 
 ## Resultados da execução local
 
-Na validação da suíte completa, foram obtidos os seguintes resultados:
+Na validação da suíte completa durante o desenvolvimento, foram obtidos os seguintes resultados:
 
-- Arquivos de teste executados: 10.
-- Testes aprovados: 12.
-- Testes reprovados: 0.
-- Tempo de execução: aproximadamente 4 minutos.
+| Indicador | Resultado |
+|---|---:|
+| Arquivos de teste executados | 10 |
+| Testes aprovados | 12 |
+| Testes reprovados | 0 |
+| Tempo aproximado de execução | 4 minutos |
 
-Resultados referentes à execução local realizada durante o desenvolvimento do projeto.
+Os resultados acima correspondem à execução local validada durante o desenvolvimento do projeto.
 
 ## Considerações finais
 
 Este projeto foi desenvolvido com foco na aplicação de boas práticas de automação de testes, organização de código, reutilização de componentes e integração contínua.
 
-A implementação busca demonstrar conhecimentos em Quality Assurance (QA), testes end-to-end, JavaScript, Cypress, Page Object Model, validação funcional e geração de relatórios automatizados.
+A implementação demonstra conhecimentos em Quality Assurance (QA), testes end-to-end, JavaScript, Cypress, Page Object Model, validação funcional e geração de relatórios automatizados.
 
-**Repositório:** https://github.com/jessy-ribeiro/automation-exercise-cypress
+**Repositório:** [automation-exercise-cypress](https://github.com/jessy-ribeiro/automation-exercise-cypress)

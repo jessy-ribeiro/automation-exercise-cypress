@@ -6,8 +6,7 @@
   "main": "index.js",
   "scripts": {
     "test": "cypress run",
-    "test:open": "cypress open",
-    "test:report": "cypress run"
+    "test:open": "cypress open"
   },
   "keywords": [
     "cypress",
@@ -15,7 +14,6 @@
     "qa",
     "mochawesome"
   ],
-  "author": "",
   "license": "ISC",
   "type": "commonjs",
   "devDependencies": {
