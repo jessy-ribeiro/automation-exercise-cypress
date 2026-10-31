@@ -5,14 +5,21 @@ module.exports = defineConfig({
   e2e: {
     baseUrl: 'https://automationexercise.com',
 
+    // Define explicitamente o arquivo de suporte do Cypress.
+    supportFile: 'cypress/support/e2e.js',
+
+    // Localização dos arquivos de teste.
     specPattern: 'cypress/e2e/**/*.cy.js',
 
     setupNodeEvents(on, config) {
+      // Configuração do Mochawesome Reporter.
       require('cypress-mochawesome-reporter/plugin')(on);
+
       return config;
     }
   },
 
+  // Reporter utilizado para gerar os relatórios HTML.
   reporter: 'cypress-mochawesome-reporter',
 
   reporterOptions: {
@@ -24,6 +31,7 @@ module.exports = defineConfig({
     saveAllAttempts: false
   },
 
+  // Evidências das execuções.
   video: true,
   screenshotOnRunFailure: true
 });
