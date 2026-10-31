@@ -1,0 +1,27 @@
+
+# Dependencias do Node.js
+node_modules/
+
+# Relatorios gerados pelo Cypress
+cypress/reports/
+
+# Videos das execucoes
+cypress/videos/
+
+# Screenshots gerados pelo Cypress
+cypress/screenshots/
+
+# Resultados temporarios
+cypress/downloads/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+*.log
+
+# Arquivos do sistema operacional
+.DS_Store
+Thumbs.db
+
+# Configuracoes locais do VS Code
+.vscode/

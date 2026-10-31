@@ -1,0 +1,17 @@
+
+{
+  "name": "Usuario Teste QA",
+  "password": "Teste@123456",
+  "day": "10",
+  "month": "5",
+  "year": "1995",
+  "firstName": "Usuario",
+  "lastName": "Teste",
+  "company": "Empresa QA",
+  "address": "Rua dos Testes, 100",
+  "country": "India",
+  "state": "Sao Paulo",
+  "city": "Sao Paulo",
+  "zipcode": "01000000",
+  "mobileNumber": "11999999999"
+}
