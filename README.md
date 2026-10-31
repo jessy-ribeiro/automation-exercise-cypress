@@ -1,24 +1,24 @@
-﻿# AutomaÃ§Ã£o de Testes Web â€” Automation Exercise
+# Automação de Testes Web — Automation Exercise
 
-Projeto de automaÃ§Ã£o de testes end-to-end desenvolvido com **Cypress e JavaScript**, utilizando boas prÃ¡ticas de organizaÃ§Ã£o, modularizaÃ§Ã£o e reutilizaÃ§Ã£o de cÃ³digo.
+Projeto de automação de testes end-to-end desenvolvido com **Cypress e JavaScript**, utilizando boas práticas de organização, modularização e reutilização de código.
 
-O objetivo Ã© validar funcionalidades essenciais da aplicaÃ§Ã£o [Automation Exercise](https://automationexercise.com/), contemplando cenÃ¡rios de cadastro, autenticaÃ§Ã£o, consulta de produtos, assinatura e realizaÃ§Ã£o de compras.
+O objetivo é validar funcionalidades essenciais da aplicação [Automation Exercise](https://automationexercise.com/), contemplando cenários de cadastro, autenticação, consulta de produtos, assinatura e realização de compras.
 
 ## Tecnologias utilizadas
 
-- **Cypress:** framework de automaÃ§Ã£o de testes end-to-end.
+- **Cypress:** framework de automação de testes end-to-end.
 - **JavaScript:** linguagem utilizada no desenvolvimento dos testes.
-- **Node.js e npm:** ambiente de execuÃ§Ã£o e gerenciamento de dependÃªncias.
-- **Page Object Model (POM):** padrÃ£o utilizado para organizaÃ§Ã£o e reutilizaÃ§Ã£o dos elementos e aÃ§Ãµes das pÃ¡ginas.
+- **Node.js e npm:** ambiente de execução e gerenciamento de dependências.
+- **Page Object Model (POM):** padrão utilizado para organização e reutilização dos elementos e ações das páginas.
 - **Fixtures:** armazenamento de dados utilizados nos testes.
-- **Mochawesome Reporter:** geraÃ§Ã£o de relatÃ³rios HTML.
-- **GitHub Actions:** automaÃ§Ã£o da execuÃ§Ã£o dos testes por integraÃ§Ã£o contÃ­nua (CI).
+- **Mochawesome Reporter:** geração de relatórios HTML.
+- **GitHub Actions:** automação da execução dos testes por integração contínua (CI).
 
-## CenÃ¡rios automatizados
+## Cenários automatizados
 
-Foram implementados 10 casos de teste, conforme os cenÃ¡rios oficiais do Automation Exercise.
+Foram implementados 10 casos de teste, conforme os cenários oficiais do Automation Exercise.
 
-| Caso | CenÃ¡rio |
+| Caso | Cenário |
 |---|---|
 | TC1 | Register User |
 | TC2 | Login User with correct email and password |
@@ -35,45 +35,47 @@ Foram implementados 10 casos de teste, conforme os cenÃ¡rios oficiais do Autom
 
 ```text
 automation-exercise-cypress/
-â”‚
-â”œâ”€â”€ .github/
-â”‚   â””â”€â”€ workflows/
-â”‚       â””â”€â”€ cypress.yml
-â”‚
-â”œâ”€â”€ cypress/
-â”‚   â”œâ”€â”€ e2e/
-â”‚   â”œâ”€â”€ fixtures/
-â”‚   â”œâ”€â”€ pages/
-â”‚   â”œâ”€â”€ support/
-â”‚   â”œâ”€â”€ reports/
-â”‚   â””â”€â”€ videos/
-â”‚
-â”œâ”€â”€ .gitignore
-â”œâ”€â”€ cypress.config.js
-â”œâ”€â”€ package.json
-â”œâ”€â”€ package-lock.json
-â””â”€â”€ README.md
+│
+├── .github/
+│   └── workflows/
+│       └── cypress.yml
+│
+├── cypress/
+│   ├── e2e/
+│   ├── fixtures/
+│   ├── pages/
+│   ├── support/
+│   ├── reports/
+│   └── videos/
+│
+├── .gitignore
+├── cypress.config.js
+├── package.json
+├── package-lock.json
+└── README.md
 ```
 
-### OrganizaÃ§Ã£o e modularizaÃ§Ã£o
+### Organização e modularização
 
-- **e2e:** arquivos com os cenÃ¡rios de testes automatizados.
-- **fixtures:** dados utilizados durante a execuÃ§Ã£o dos testes.
-- **pages:** classes Page Objects, responsÃ¡veis pelos seletores e aÃ§Ãµes das pÃ¡ginas.
-- **support:** configuraÃ§Ãµes de suporte e registro do Mochawesome.
-- **reports:** relatÃ³rios HTML gerados apÃ³s a execuÃ§Ã£o.
-- **videos:** gravaÃ§Ãµes das execuÃ§Ãµes realizadas pelo Cypress.
-- **.github/workflows:** configuraÃ§Ã£o do pipeline de integraÃ§Ã£o contÃ­nua.
+- **e2e:** arquivos com os cenários de testes automatizados.
+- **fixtures:** dados utilizados durante a execução dos testes.
+- **pages:** classes Page Objects, responsáveis pelos seletores e ações das páginas.
+- **support:** configurações de suporte e registro do Mochawesome.
+- **reports:** relatórios HTML gerados após a execução.
+- **videos:** gravações das execuções realizadas pelo Cypress.
+- **.github/workflows:** configuração do pipeline de integração contínua.
 
-## InstalaÃ§Ã£o e configuraÃ§Ã£o
+> Observação: as pastas `reports` e `videos` são geradas durante as execuções e não são versionadas no repositório.
 
-### PrÃ©-requisitos
+## Instalação e configuração
+
+### Pré-requisitos
 
 - Node.js instalado.
 - npm instalado.
-- Git instalado (para clonar o repositÃ³rio).
+- Git instalado (para clonar o repositório).
 
-### 1. Clonar o repositÃ³rio
+### 1. Clonar o repositório
 
 ```bash
 git clone https://github.com/jessy-ribeiro/automation-exercise-cypress.git
@@ -85,7 +87,7 @@ Entre na pasta do projeto:
 cd automation-exercise-cypress
 ```
 
-### 2. Instalar as dependÃªncias
+### 2. Instalar as dependências
 
 ```bash
 npm install
@@ -99,67 +101,69 @@ Para executar todos os testes no terminal:
 npm test
 ```
 
-Para abrir a interface grÃ¡fica do Cypress:
+Para abrir a interface gráfica do Cypress:
 
 ```bash
 npm run test:open
 ```
 
-## RelatÃ³rios de testes
+## Relatórios de testes
 
-O projeto utiliza o **Mochawesome Reporter** para gerar relatÃ³rios HTML com os resultados das execuÃ§Ãµes.
+O projeto utiliza o **Mochawesome Reporter** para gerar relatórios HTML com os resultados das execuções.
 
-Os relatÃ³rios sÃ£o configurados para serem armazenados em:
+Os relatórios são configurados para serem armazenados em:
 
 ```text
 cypress/reports/
 ```
 
-O arquivo principal do relatÃ³rio Ã©:
+O arquivo principal do relatório é:
 
 ```text
 cypress/reports/index.html
 ```
 
-O relatÃ³rio permite consultar os cenÃ¡rios executados, resultados, duraÃ§Ã£o e detalhes das execuÃ§Ãµes.
+O relatório permite consultar os cenários executados, resultados, duração e detalhes das execuções.
 
-## IntegraÃ§Ã£o contÃ­nua â€” GitHub Actions
+## Integração contínua — GitHub Actions
 
-O projeto possui integraÃ§Ã£o com GitHub Actions por meio do arquivo:
+O projeto possui integração com GitHub Actions por meio do arquivo:
 
 ```text
 .github/workflows/cypress.yml
 ```
 
-A automaÃ§Ã£o estÃ¡ configurada para executar os testes em:
+A automação está configurada para executar os testes em:
 
 - Push nas branches `main` e `master`.
 - Pull Requests direcionados a essas branches.
-- ExecuÃ§Ã£o manual pelo GitHub Actions.
+- Execução manual pelo GitHub Actions.
 
-Durante o pipeline, sÃ£o realizadas as seguintes etapas:
+Durante o pipeline, são realizadas as seguintes etapas:
 
-1. Download do cÃ³digo do repositÃ³rio.
-2. ConfiguraÃ§Ã£o do ambiente Node.js.
-3. InstalaÃ§Ã£o das dependÃªncias com `npm ci`.
-4. ExecuÃ§Ã£o dos testes automatizados.
-5. Armazenamento dos relatÃ³rios e evidÃªncias da execuÃ§Ã£o.
+1. Download do código do repositório.
+2. Configuração do ambiente Node.js.
+3. Instalação das dependências com `npm ci`.
+4. Execução dos testes automatizados.
+5. Armazenamento dos relatórios e evidências da execução.
 
-Os relatÃ³rios, vÃ­deos e screenshots sÃ£o disponibilizados como artefatos do GitHub Actions, com retenÃ§Ã£o configurada para **90 dias**.
+Os relatórios, vídeos e screenshots são disponibilizados como artefatos do GitHub Actions, com retenção configurada para **90 dias**.
 
-## Resultados da execuÃ§Ã£o local
+## Resultados da execução local
 
-Na validaÃ§Ã£o da suÃ­te completa, foram obtidos os seguintes resultados:
+Na validação da suíte completa, foram obtidos os seguintes resultados:
 
 - Arquivos de teste executados: 10.
 - Testes aprovados: 12.
 - Testes reprovados: 0.
-- Tempo de execuÃ§Ã£o: aproximadamente 4 minutos.
+- Tempo de execução: aproximadamente 4 minutos.
 
-<sub>Resultados referentes Ã  execuÃ§Ã£o local realizada durante o desenvolvimento do projeto.</sub>
+Resultados referentes à execução local realizada durante o desenvolvimento do projeto.
 
-## ConsideraÃ§Ãµes finais
+## Considerações finais
 
-Este projeto foi desenvolvido com foco na aplicaÃ§Ã£o de boas prÃ¡ticas de automaÃ§Ã£o de testes, organizaÃ§Ã£o de cÃ³digo, reutilizaÃ§Ã£o de componentes e integraÃ§Ã£o contÃ­nua.
+Este projeto foi desenvolvido com foco na aplicação de boas práticas de automação de testes, organização de código, reutilização de componentes e integração contínua.
 
-A implementaÃ§Ã£o busca demonstrar conhecimentos em Quality Assurance (QA), testes end-to-end, JavaScript, Cypress, Page Object Model, validaÃ§Ã£o funcional e geraÃ§Ã£o de relatÃ³rios automatizados.
+A implementação busca demonstrar conhecimentos em Quality Assurance (QA), testes end-to-end, JavaScript, Cypress, Page Object Model, validação funcional e geração de relatórios automatizados.
+
+**Repositório:** https://github.com/jessy-ribeiro/automation-exercise-cypress
